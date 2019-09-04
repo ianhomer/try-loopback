@@ -9,5 +9,6 @@ guaranteed to be safe.".
 
 * https://loopback.io/doc/en/lb4/Database-migrations.html
 
-I can't see a way with loopback to generate migration scripts from model and then  have tight
+Now I can see this auto-migration happening locally, but I wouldn't trust that approach in a production
+environment.  I can't see a way with loopback to generate migration scripts from model and then have tight
 control of the migration generated.
