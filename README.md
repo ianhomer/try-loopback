@@ -1,3 +1,13 @@
 # try-loopback
 
-[![LoopBack](https://github.com/strongloop/loopback-next/raw/master/docs/site/imgs/branding/Powered-by-LoopBack-Badge-(blue)-@2x.png)](http://loopback.io/)
+
+# Database migrations
+
+Auto-update / auto-migrate modes based on data model, however auto-update comes with the warning
+"Auto-update will attempt to preserve data while updating the schema in your target database, but this is not 
+guaranteed to be safe.".
+
+* https://loopback.io/doc/en/lb4/Database-migrations.html
+
+I can't see a way with loopback to generate migration scripts from model and then  have tight
+control of the migration generated.

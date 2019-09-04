@@ -12,6 +12,10 @@ export class Thing extends Entity {
         required: true,
     })
     title: string;
+    @property({
+        required: false,
+    })
+    description?: string
 }
 
 export interface ThingRelations {
