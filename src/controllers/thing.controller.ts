@@ -1,6 +1,6 @@
 import {Thing} from '../models/thing.model';
-import {repository} from '@loopback/repository';
-import {post, get, getModelSchemaRef, param, requestBody} from '@loopback/rest';
+import {Filter, repository} from '@loopback/repository';
+import {post, get, getFilterSchemaFor, getModelSchemaRef, param, requestBody} from '@loopback/rest';
 import {ThingRepository} from '../repositories';
 
 export class ThingController {
@@ -8,7 +8,7 @@ export class ThingController {
         @repository(ThingRepository) protected thingRepo: ThingRepository,
     ) {}
 
-    @post('/todos', {
+    @post('/things', {
         responses: {
             '200': {
                 description: 'Todo model instance',
@@ -16,7 +16,7 @@ export class ThingController {
             },
         },
     })
-    async createTodo(
+    async createThing(
         @requestBody({
             content: {
                 'application/json': {
@@ -29,7 +29,7 @@ export class ThingController {
         return this.thingRepo.create(todo);
     }
 
-    @get('/todos/{id}', {
+    @get('/things/{id}', {
         responses: {
             '200': {
                 description: 'Todo model instance',
@@ -37,10 +37,29 @@ export class ThingController {
             },
         },
     })
-    async findTodoById(
+    async findThingById(
         @param.path.number('id') id: number,
         @param.query.boolean('items') items?: boolean,
     ): Promise<Thing> {
         return this.thingRepo.findById(id);
+    }
+
+    @get('/things', {
+        responses: {
+            '200': {
+                description: 'Array of Thing model instances',
+                content: {
+                    'application/json': {
+                        schema: {type: 'array', items: getModelSchemaRef(Thing)},
+                    },
+                },
+            },
+        },
+    })
+    async findThings(
+        @param.query.object('filter', getFilterSchemaFor(Thing))
+            filter?: Filter<Thing>,
+    ): Promise<Thing[]> {
+        return this.thingRepo.find(filter);
     }
 }
