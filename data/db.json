@@ -1,11 +1,12 @@
 {
   "ids": {
-    "Thing": 3
+    "Thing": 4
   },
   "models": {
     "Thing": {
       "1": "{\"title\":\"string\",\"id\":1}",
-      "2": "{\"title\":\"my-test\",\"id\":2}"
+      "2": "{\"title\":\"my-test\",\"id\":2}",
+      "3": "{\"title\":\"string\",\"id\":3}"
     }
   }
 }
