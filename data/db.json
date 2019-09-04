@@ -1,0 +1,11 @@
+{
+  "ids": {
+    "Thing": 3
+  },
+  "models": {
+    "Thing": {
+      "1": "{\"title\":\"string\",\"id\":1}",
+      "2": "{\"title\":\"my-test\",\"id\":2}"
+    }
+  }
+}
