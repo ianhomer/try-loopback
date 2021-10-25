@@ -47,29 +47,29 @@
     "!*/__tests__"
   ],
   "dependencies": {
-    "@loopback/boot": "^3.4.2",
-    "@loopback/context": "^3.17.1",
-    "@loopback/core": "^2.16.2",
-    "@loopback/openapi-v3": "^6.0.0",
-    "@loopback/repository": "^3.7.1",
-    "@loopback/rest": "^10.0.0",
-    "@loopback/rest-explorer": "^3.3.2",
-    "@loopback/service-proxy": "^3.2.2",
+    "@loopback/boot": "^3.4.4",
+    "@loopback/context": "^3.18.0",
+    "@loopback/core": "^2.18.0",
+    "@loopback/openapi-v3": "^6.0.2",
+    "@loopback/repository": "^3.7.3",
+    "@loopback/rest": "^10.1.0",
+    "@loopback/rest-explorer": "^3.3.4",
+    "@loopback/service-proxy": "^3.2.4",
     "loopback-connector-postgresql": "^5.4.0"
   },
   "devDependencies": {
-    "@loopback/build": "^7.0.0",
-    "source-map-support": "^0.5.19",
-    "@loopback/testlab": "^3.4.2",
-    "@types/node": "^16.7.1",
-    "@typescript-eslint/parser": "^4.29.2",
-    "@typescript-eslint/eslint-plugin": "^4.29.2",
-    "@loopback/eslint-config": "^11.0.0",
-    "eslint": "^7.32.0",
+    "@loopback/build": "^7.0.2",
+    "source-map-support": "^0.5.20",
+    "@loopback/testlab": "^3.4.4",
+    "@types/node": "^16.11.4",
+    "@typescript-eslint/parser": "^5.1.0",
+    "@typescript-eslint/eslint-plugin": "^5.1.0",
+    "@loopback/eslint-config": "^11.0.2",
+    "eslint": "^8.1.0",
     "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-eslint-plugin": "^3.5.3",
+    "eslint-plugin-eslint-plugin": "^4.0.1",
     "eslint-plugin-mocha": "^9.0.0",
     "minimist": ">=1.2.5",
-    "typescript": "~4.3.5"
+    "typescript": "~4.4.4"
   }
 }
